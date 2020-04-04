@@ -13,7 +13,7 @@ services:
     environment: 
       - MLFLOW_TRACKING_URI=http://mlflow:5000
     volumes: 
-      - file-store:/home/jovyan
+      - ./file-store:/home/jovyan
   #----------------------    
   #--- ML Flow Server ---
   #----------------------
@@ -27,7 +27,7 @@ services:
     depends_on: 
       - postgres
     volumes: 
-      - file-store:/mlflow
+      - ./file-store:/mlflow
   #-------------------
   #--- Postgres DB ---
   #-------------------
